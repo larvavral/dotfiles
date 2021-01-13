@@ -1,0 +1,55 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
+
+# Create neccessary folders
+- create:
+  - ~/Inbox
+  - ~/Downloads
+  - ~/Documents
+  - ~/Projects
+  - ~/Notes
+
+# Update submodules
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+# Install Brew
+- shell:
+  - [brew/install.sh, "Installing Brew"]
+  - [rvm/install.sh, "Installing RVM"]
+  - [nvm/install.sh, "Installing NVM"]
+  - [gvm/install.sh, "Installing GVM"]
+
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    # ~/.vim: .vim
+    # ~/.vimrc: .vim/.vimrc
+    ~/.zshrc: zsh/.zshrc
+    zsh/ohmyzsh/custom/themes/powerlevel10k: zsh/powerlevel10k
+
+# Install Apps
+- shell:
+  - [brew bundle, "Installing Apps"]
+
+# Install VS Code config
+- link:
+    "~/Library/Application Support/Code/User/":
+      glob: true
+      force: true
+      path: vscode/*
+- shell:
+  - [vscode/install_extensions.sh, "Install VS Code extensions"]
+
+# Install OSX settings
+# - shell:
+#   - [osx/settings.sh, "Setup OSX defaults"]
