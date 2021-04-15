@@ -9,11 +9,12 @@
 
 # Create neccessary folders
 - create:
-  - ~/Inbox
+#  - ~/Inbox
   - ~/Downloads
   - ~/Documents
-  - ~/Projects
-  - ~/Notes
+#  - ~/Projects
+#  - ~/Notes
+  - ~/Work
 
 # Update submodules
 - shell:
