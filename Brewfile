@@ -5,13 +5,13 @@ cask 'docker'
 
 # Productivity
 cask 'google-chrome'
-cask 'sequel-pro' # SQL querying tool
+cask 'sequel-ace' # SQL querying tool
 cask 'appcleaner' # App Uninstaller
 cask 'gifcapture' # Screenshot Gif
 cask 'gitify' # Git Notification on menu bar
 cask 'rectangle' # Windows resizing tool
 cask 'the-unarchiver'
-# cask 'pock' # Optional: Touchbar customization
+cask 'postman'
 
 # Comm
 # cask 'station'
