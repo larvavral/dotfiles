@@ -21,7 +21,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # GVM
 # Load GVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/gvm" ]] && source "$HOME/.rvm/scripts/gvm"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
